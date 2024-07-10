@@ -1,0 +1,116 @@
+.summer {
+  min-height: 1700px;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  @media screen and (max-width: 600px) {
+    min-height: 1300px;
+  }
+  @media screen and (max-width: 500px) {
+    min-height: 1100px;
+  }
+}
+
+.summer__title {
+  width: 1456px;
+  height: 743px;
+  padding-top: 88px;
+  padding-left: 178px;
+  border-radius: 206px;
+  background: #fffefe;
+  font-weight: 700;
+  font-size: 400px;
+  line-height: 65%;
+  color: #000;
+  position: relative;
+  left: -140px;
+  z-index: 5;
+
+  @media screen and (max-width: 1600px) {
+    width: 80vw;
+    height: fit-content;
+    padding-bottom: 88px;
+    font-size: 360px;
+  }
+  @media screen and (max-width: 1340px) {
+    font-size: 300px;
+  }
+  @media screen and (max-width: 1280px) {
+    font-size: 240px;
+  }
+  @media screen and (max-width: 1080px) {
+    font-size: 180px;
+    border-radius: 100px;
+  }
+  @media screen and (max-width: 800px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 140px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    left: 0;
+    border-radius: 0 0 80px 80px;
+    padding-left: 0;
+    text-align: center;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 100px;
+  }
+
+  &::after {
+    content: url("../public/img/summer/summer_shells.png");
+    position: absolute;
+    top: -40px;
+    right: 0;
+    translate: 100% 0;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.summer__text {
+  max-width: 587px;
+  display: block;
+  margin-top: 106px;
+  margin-left: 65px;
+  font-size: 60px;
+  color: #00fff2;
+  position: relative;
+  filter: drop-shadow(0 10px 14px #00fff2);
+
+  @media screen and (max-width: 768px) {
+    margin-top: 40px;
+    margin-left: 0;
+    font-size: 48px;
+    text-align: center;
+  }
+}
+
+.summer__flamingo {
+  position: absolute;
+  top: 600px;
+  right: 80px;
+
+  @media screen and (max-width: 1600px) {
+    top: 640px;
+  }
+
+  &::before {
+    content: url("../public/img/summer/summer_shadow.png");
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    @media screen and (max-width: 768px) {
+      scale: 0.8;
+    }
+    @media screen and (max-width: 600px) {
+      scale: 0.6;
+    }
+    @media screen and (max-width: 500px) {
+      scale: 0.4;
+    }
+  }
+}

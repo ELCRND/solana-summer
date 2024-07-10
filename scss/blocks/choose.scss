@@ -3,7 +3,23 @@
   padding-top: 144px;
   background-color: #000;
   position: relative;
-  overflow: hidden;
+
+  @media screen and (max-width: 1320px) {
+    min-height: 2100px;
+  }
+  @media screen and (max-width: 1080px) {
+    min-height: 2400px;
+  }
+  @media screen and (max-width: 784px) {
+    padding-top: 80px;
+    min-height: 2600px;
+  }
+  @media screen and (max-width: 500px) {
+    min-height: 3400px;
+  }
+  @media screen and (max-width: 440px) {
+    min-height: 3200px;
+  }
 }
 
 .choose__container {
@@ -20,6 +36,16 @@
   font-size: 150px;
   position: relative;
   z-index: 1;
+
+  @media screen and (max-width: 1320px) {
+    text-align: center;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 100px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 76px;
+  }
 
   &::before {
     content: "CHOOSE";
@@ -38,6 +64,17 @@
     -webkit-text-fill-color: transparent;
     filter: blur(10px);
     z-index: -1;
+    @media screen and (max-width: 1320px) {
+      left: 50%;
+      translate: -46% 0;
+    }
+    @media screen and (max-width: 768px) {
+      top: -20px;
+    }
+    @media screen and (max-width: 500px) {
+      filter: blur(5px);
+      translate: -48% 0;
+    }
   }
 }
 
@@ -48,6 +85,9 @@
   gap: 250px 44px;
   position: relative;
   z-index: 5;
+  @media screen and (max-width: 1320px) {
+    max-width: 100%;
+  }
 
   div {
     position: relative;
@@ -55,13 +95,14 @@
     img:first-of-type {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 50%;
+      translate: -50% 0;
     }
     img:last-of-type {
       position: absolute;
       top: -64px;
       left: 50%;
-      translate: -58% 0;
+      translate: -50% 0;
     }
     &:nth-child(7) {
       img:last-of-type {
@@ -75,12 +116,32 @@
 }
 
 .choose__phone {
+  width: 100%;
   position: absolute;
   top: 98px;
   right: 98px;
   width: 671px;
   height: 1264px;
   z-index: 5;
+
+  @media screen and (max-width: 1440px) {
+    right: 0;
+  }
+  @media screen and (max-width: 1320px) {
+    top: auto;
+    bottom: 0;
+    right: 50%;
+    translate: 50% 0;
+  }
+  @media screen and (max-width: 600px) {
+    scale: 0.8;
+  }
+  @media screen and (max-width: 500px) {
+    scale: 0.7;
+  }
+  @media screen and (max-width: 440px) {
+    scale: 0.5;
+  }
 
   .phone__bg {
     width: 551px;
@@ -151,5 +212,8 @@
     left: 0;
     translate: -35% -25%;
     z-index: -1;
+  }
+  @media screen and (max-width: 1600px) {
+    display: none;
   }
 }
